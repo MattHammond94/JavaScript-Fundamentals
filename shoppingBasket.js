@@ -8,6 +8,10 @@ class ShoppingBasket {
     return 0;
   }
 
+  addItem(candy) {
+    return this.items.push(candy);
+  }
+
 }
 
 module.exports = ShoppingBasket;
