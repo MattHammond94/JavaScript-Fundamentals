@@ -5,7 +5,11 @@ class ShoppingBasket {
   }
 
   getTotalPrice() {
-    return 0;
+    let total = 0;
+    this.items.map((candy) => {
+      total += candy.getPrice();
+    });
+    return total;
   }
 
   addItem(candy) {
