@@ -30,4 +30,8 @@ describe('candySearch', () => {
   it('Returns an empty array when the string arg is not the beginning of any candy names', () => {
     expect(candySearch('Z', 15)).toEqual([])
   });
+
+  it('Should Gummi', () => {
+    expect(candySearch('Gum', 12)).toEqual([ 'Gummi bears' ]);
+  });
 });
