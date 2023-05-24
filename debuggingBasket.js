@@ -30,3 +30,15 @@ basket1.addCandy(new Candy('Jelly-Beans', 14.99));
 basket1.addCandy(new Candy('BonBons', 9.99));
 basket1.addCandy(new Candy('Maoam', 5.99));
 console.log(basket1.getTotalPrice());
+
+// Should return 20.97
+
+
+const basket2 = new ShoppingBasket;
+basket2.applyDiscount(17.99);
+basket2.addCandy(new Candy('Jelly-Beans', 14.99));
+basket2.addCandy(new Candy('BonBons', 9.99));
+basket2.addCandy(new Candy('Maoam', 5.99));
+console.log(basket2.getTotalPrice());
+
+// Should return 12.98
