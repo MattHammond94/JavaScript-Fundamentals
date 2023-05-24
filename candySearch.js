@@ -27,7 +27,7 @@ const candies = [
 // });
 
 
-const searchCandies = (string, number) => {
+const candySearch = (string, number) => {
   let selected = candies.filter((candy) => { 
     return candy.name.startsWith(string) && candy.price < number;
   });
@@ -41,4 +41,4 @@ const searchCandies = (string, number) => {
 
 // console.log(searchCandies('S', 5))
 
-module.exports = searchCandies;
+module.exports = candySearch;
