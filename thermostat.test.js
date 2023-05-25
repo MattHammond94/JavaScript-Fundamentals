@@ -28,4 +28,16 @@ describe(Thermostat, () => {
     therm3.down();
     expect(therm3.getTemperature()).toBe(22);
   });
+
+  it('Should reset the temperature to 20 after reset is called', () => {
+    const therm4 = new Thermostat();
+    therm4.down();
+    therm4.up();
+    therm4.up();
+    therm4.up();
+    therm4.up();
+    therm4.down();
+    therm4.reset();
+    expect(therm4.getTemperature()).toBe(20);
+  });
 });
