@@ -34,7 +34,11 @@ class Thermostat {
   }
 
   setPowerSavingMode(boolean) {
-    this.savingMode = boolean;
+    if (typeof boolean == 'boolean') {
+      this.savingMode = boolean;
+    } else {
+      return "This is not a valid input";
+    }
   }
 
 }
