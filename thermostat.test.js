@@ -12,10 +12,48 @@ describe(Thermostat, () => {
     expect(therm1.getTemperature()).toBe(21);
   });
 
+  it('Should increase the temperature to a maximum of 32', () => {
+    const therm1 = new Thermostat();
+    therm1.setPowerSavingMode(false);
+    therm1.up();
+    therm1.up();
+    therm1.up();
+    therm1.up();
+    therm1.up();
+    therm1.up();
+    therm1.up();
+    therm1.up();
+    therm1.up();
+    therm1.up();
+    therm1.up();
+    therm1.up();
+    therm1.up();
+    therm1.up();
+    therm1.up();
+    expect(therm1.getTemperature()).toBe(32);
+  });
+
   it('Should decrease the temperature by 1 when the down method is called', () => {
     const therm2 = new Thermostat();
     therm2.down();
     expect(therm2.getTemperature()).toBe(19);
+  });
+
+  it('Should not allow the temperature to decrease lower than 10', () => {
+    const therm2 = new Thermostat();
+    therm2.down();
+    therm2.down();
+    therm2.down();
+    therm2.down();
+    therm2.down();
+    therm2.down();
+    therm2.down();
+    therm2.down();
+    therm2.down();
+    therm2.down();
+    therm2.down();
+    therm2.down();
+    expect(therm2.getTemperature()).toBe(10);
   });
 
   it('Should return the correct temperature after multiple up and down calls', () => {
