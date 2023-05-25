@@ -17,4 +17,15 @@ describe(Thermostat, () => {
     therm2.down();
     expect(therm2.getTemperature()).toBe(19);
   });
+
+  it('Should return the correct temperature after multiple up and down calls', () => {
+    const therm3 = new Thermostat();
+    therm3.down();
+    therm3.up();
+    therm3.up();
+    therm3.up();
+    therm3.up();
+    therm3.down();
+    expect(therm3.getTemperature()).toBe(22);
+  });
 });
