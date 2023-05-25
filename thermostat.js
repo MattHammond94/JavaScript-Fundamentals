@@ -41,6 +41,16 @@ class Thermostat {
     }
   }
 
+  getCurrentUsage() {
+    if (this.temperature > 25) {
+      return "You are currently on High-Usage";
+    } else if(this.temperature >= 18) {
+      return "You are currently on Medium-Usage"; 
+    } else {
+      return "You are currently on Low-Usage";
+    }
+  }
+
 }
 
 module.exports = Thermostat;

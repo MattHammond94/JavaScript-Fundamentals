@@ -109,4 +109,35 @@ describe(Thermostat, () => {
     const therm7 = new Thermostat();
     expect(therm7.setPowerSavingMode('false')).toBe('This is not a valid input');
   });
+
+  it('Should return the correct energy usage level when called', () => {
+    const therm8 = new Thermostat();
+    therm8.setPowerSavingMode(false);
+    therm8.up();
+    therm8.up();
+    therm8.up();
+    therm8.up();
+    therm8.up();
+    therm8.up();
+    expect(therm8.getCurrentUsage()).toBe('You are currently on High-Usage');
+  });
+
+  it('Should return the correct energy usage level when called', () => {
+    const therm8 = new Thermostat();
+    therm8.up();
+    therm8.up();
+    therm8.up();
+    therm8.up();
+    therm8.up();
+    expect(therm8.getCurrentUsage()).toBe('You are currently on Medium-Usage');
+  });
+
+  it('Should return the correct energy usage level when called', () => {
+    const therm8 = new Thermostat();
+    therm8.down();
+    therm8.down();
+    therm8.down();
+    therm8.down();
+    expect(therm8.getCurrentUsage()).toBe('You are currently on Low-Usage');
+  });
 });
