@@ -2,6 +2,7 @@ class Thermostat {
 
   constructor() {
     this.temperature = 20;
+    this.savingMode = true
   }
 
   getTemperature() {
@@ -9,7 +10,11 @@ class Thermostat {
   }
 
   up() {
-    this.temperature += 1;
+    if (this.savingMode === true && this.temperature === 25) { 
+      this.temperature = 25
+    } else {
+      this.temperature += 1;
+    }
   }
 
   down() {
@@ -18,6 +23,10 @@ class Thermostat {
 
   reset() {
     this.temperature = 20
+  }
+
+  setPowerSavingMode(boolean) {
+    this.savingMode = boolean;
   }
 
 }

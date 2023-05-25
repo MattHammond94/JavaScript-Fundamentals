@@ -40,4 +40,16 @@ describe(Thermostat, () => {
     therm4.reset();
     expect(therm4.getTemperature()).toBe(20);
   });
+
+  it('Should only allow the temperature to reach 25 when power save mode is set to true', () => {
+    const therm5 = new Thermostat();
+    therm5.up();
+    therm5.up();
+    therm5.up();
+    therm5.up();
+    therm5.up();
+    therm5.up();
+    therm5.up();
+    expect(therm5.getTemperature()).toBe(25);
+  });
 });
