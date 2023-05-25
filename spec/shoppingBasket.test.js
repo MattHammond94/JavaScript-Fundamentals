@@ -1,4 +1,4 @@
-const ShoppingBasket = require('./shoppingBasket');
+const ShoppingBasket = require('../lib/shoppingBasket');
 
 describe(ShoppingBasket, () => {
   it('Should return 0 when getTotalPrice is called before adding any Candy', () => {

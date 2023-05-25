@@ -1,4 +1,4 @@
-const fizzbuzz = require('./fizzbuzz');
+const fizzbuzz = require('../lib/fizzbuzz');
 
 describe('fizzbuzz', () => {
   it('Should return fizz when number passed is divisible by 3', () => {

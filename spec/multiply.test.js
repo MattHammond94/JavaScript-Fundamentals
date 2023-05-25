@@ -1,4 +1,4 @@
-const multiply = require('./multiply');
+const multiply = require('../lib/multiply');
 
 describe('multiply', () => {
   it('Multiplies 3 and 3', () => {

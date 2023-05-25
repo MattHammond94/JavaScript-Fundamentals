@@ -1,4 +1,4 @@
-const candySearch = require('./candySearch')
+const candySearch = require('../lib/candySearch')
 
 describe('candySearch', () => {
   it('returns two correct candy object names in an array based on arg params', () => {

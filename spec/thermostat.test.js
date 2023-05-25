@@ -1,4 +1,4 @@
-const Thermostat = require('./thermostat');
+const Thermostat = require('../lib/thermostat');
 
 describe(Thermostat, () => {
   it('Should return 20 when getTemperature is called', () => {

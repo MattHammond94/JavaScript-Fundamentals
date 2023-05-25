@@ -1,4 +1,4 @@
-const Candy = require('./candy');
+const Candy = require('../lib/candy');
 
 describe(Candy, () => {
   it('Should return the correct name when getName is called', () => {
