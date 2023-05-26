@@ -2,7 +2,7 @@ const fetchPokemon = (pokemonname) => {
   return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonname}`)
   .then((response) => response.json())
   .then((pokemon) => { 
-    const pokemonObj = {
+    return {
       name: pokemon.name,
       id: pokemon.id,
       height: pokemon.height,
@@ -11,10 +11,10 @@ const fetchPokemon = (pokemonname) => {
         return slot.type.name;
       })
     };
-    return pokemonObj;
+    // return pokemonObj;
   });
 }
 
-fetchPokemon('lapras').then((data) => console.log(data))
+// fetchPokemon('alakazam').then((data) => console.log(data))
 
 module.exports = fetchPokemon;
