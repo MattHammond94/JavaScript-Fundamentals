@@ -11,10 +11,9 @@ const fetchPokemon = (pokemonname) => {
         return slot.type.name;
       })
     };
-    // return pokemonObj;
   });
 }
 
-// fetchPokemon('alakazam').then((data) => console.log(data))
+// fetchPokemon('lapras').then((data) => console.log(data))
 
 module.exports = fetchPokemon;
