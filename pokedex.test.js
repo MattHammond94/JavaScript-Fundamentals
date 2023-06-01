@@ -1,5 +1,5 @@
 const Pokedex = require('./pokedex');
-const fetchPokemon = require('./api');
+const fetchPokemon = require('./pokemonApi');
 
 describe(Pokedex, () => {
   it('Should return an empty array when all is called beofre any catch calls', () => {

@@ -1,4 +1,4 @@
-const fetchPokemon = require('./api');
+const fetchPokemon = require('./pokemonApi');
 
 class Pokedex {
 

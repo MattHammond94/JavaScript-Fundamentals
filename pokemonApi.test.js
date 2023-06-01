@@ -1,4 +1,4 @@
-const fetchPokemon = require('./api');
+const fetchPokemon = require('./pokemonApi');
 
 describe('fetchPokemon', () => {
   it('returns the correct data of passed pokemon', (done) => {
